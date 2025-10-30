@@ -1,10 +1,10 @@
-// src/components/Sidebar.jsx
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Folder, CreditCard, Settings, LogOut } from "lucide-react";
 
 const Sidebar = () => {
   const location = useLocation();
+
   const navItems = [
     { name: "Dashboard", path: "/dashboard", icon: <Home size={18} /> },
     { name: "My Projects", path: "/projects", icon: <Folder size={18} /> },
@@ -14,60 +14,71 @@ const Sidebar = () => {
   ];
 
   return (
-    // fixed so it touches the left edge of the viewport
-    <aside className="fixed left-0 top-0 h-screen w-64 
-  bg-[linear-gradient(135deg,_#50589C_0%,_#5E63AA_40%,_#B7B8E3_75%,_#DADBF3_100%)]
-  text-white flex flex-col justify-between px-4 py-6 z-40">
+    <aside
+      className="fixed top-0 left-0 h-screen w-64 
+      bg-[linear-gradient(135deg,_#50589C_0%,_#5E63AA_45%,_#B7B8E3_85%,_#E6E7F6_130%)]
+      text-white flex flex-col justify-between px-6 py-6 z-40
+      border-r border-white/20 shadow-[0_4px_30px_rgba(80,88,156,0.25)]
+      overflow-hidden"
+    >
+      {/* 🔹 Glossy Overlays (behind content) */}
+      <div className="absolute inset-0 bg-white/10 backdrop-blur-md pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white/5 mix-blend-overlay pointer-events-none z-0" />
 
+      {/* 🔹 Sidebar Content */}
+      <div className="relative z-10 flex flex-col justify-between h-full">
+        
+        {/* Project Name + Profile Section */}
+        <div className="flex flex-col items-center mt-2 mb-4">
+          <h1
+            className="text-3xl font-bold mb-5 tracking-wide 
+            bg-gradient-to-b from-[#CFC7FF] to-[#FFFFFF]
+            bg-clip-text text-transparent
+            drop-shadow-[0_2px_4px_rgba(255,255,255,0.15)]
+            font-sans"
+          >
+            FreeChain
+          </h1>
 
-
-
-      {/* PROFILE AT TOP */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 px-2 py-2">
-          <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-sm font-medium">
-            A
+          <div className="w-20 h-20 rounded-full border-4 border-[#7030DE] bg-white flex items-center justify-center shadow-md">
+            <img
+              src="/profile.png"
+              alt="User"
+              className="w-16 h-16 rounded-full object-cover"
+            />
           </div>
-          <div>
-            <div className="text-sm font-semibold">Ashish</div>
-            <div className="text-xs text-white/80">Creator</div>
-          </div>
+          <h2 className="mt-3 text-lg font-semibold text-white">John Doe</h2>
+          <p className="text-sm text-white/80">UI Designer</p>
         </div>
 
         {/* Navigation */}
-        <nav className="mt-6 flex flex-col gap-2 px-2">
+        <nav className="flex flex-col gap-5 -mt-10 pl-4">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200
-                  ${isActive ? "bg-white text-[#7030DE] font-semibold shadow-md" : "text-white/95 hover:bg-white/10"}`}
-                aria-current={isActive ? "page" : undefined}
+                className={`flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200 ${
+                  isActive
+                    ? "bg-white text-[#7030DE] font-semibold shadow-sm"
+                    : "text-white hover:bg-white/10"
+                }`}
               >
-                <span className={`flex items-center justify-center w-8 h-8 rounded-md
-                  ${isActive ? "bg-white/80 text-[#7030DE]" : "bg-white/0 text-white/90"}`}>
-                  {item.icon}
-                </span>
-
-                <span className="text-sm">{item.name}</span>
-
-                {isActive && (
-                  <span className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-1 rounded-r-md bg-white" />
-                )}
+                {item.icon}
+                <span>{item.name}</span>
               </Link>
             );
           })}
         </nav>
-      </div>
 
-      {/* Logout at bottom */}
-      <div className="mt-6 pt-6 border-t border-white/20 px-2">
-        <button className="w-full flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10 transition">
-          <LogOut size={18} />
-          <span>Logout</span>
-        </button>
+        {/* Logout */}
+        <div className="border-t border-white/20 mt-10 pt-6">
+          <button className="w-full flex items-center gap-3 px-3 py-2 rounded-md hover:bg-white/10 transition">
+            <LogOut size={18} />
+            <span>Logout</span>
+          </button>
+        </div>
       </div>
     </aside>
   );
