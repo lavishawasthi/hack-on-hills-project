@@ -43,7 +43,7 @@ const Sidebar = () => {
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-col gap-5 -mt-10 pl-4">
+        <nav className="flex flex-col gap-5 -mt-2 pl-4">
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             return (
