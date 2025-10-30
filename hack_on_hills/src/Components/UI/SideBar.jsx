@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Home, Folder, CreditCard, Settings, LogOut } from "lucide-react";
+import Profile from "../../assets/profile.jpg"
 
 const Sidebar = () => {
   const location = useLocation();
@@ -15,7 +16,7 @@ const Sidebar = () => {
 
   return (
     <aside
-      className="fixed top-0 left-0 h-screen w-64 
+      className="fixed top-16 left-0 h-[calc(100vh-4rem)] w-64  
       bg-[linear-gradient(135deg,_#50589C_0%,_#5E63AA_45%,_#B7B8E3_85%,_#E6E7F6_130%)]
       text-white flex flex-col justify-between px-6 py-6 z-40
       border-r border-white/20 shadow-[0_4px_30px_rgba(80,88,156,0.25)]
@@ -30,19 +31,9 @@ const Sidebar = () => {
         
         {/* Project Name + Profile Section */}
         <div className="flex flex-col items-center mt-2 mb-4">
-          <h1
-            className="text-3xl font-bold mb-5 tracking-wide 
-            bg-gradient-to-b from-[#CFC7FF] to-[#FFFFFF]
-            bg-clip-text text-transparent
-            drop-shadow-[0_2px_4px_rgba(255,255,255,0.15)]
-            font-sans"
-          >
-            FreeChain
-          </h1>
-
           <div className="w-20 h-20 rounded-full border-4 border-[#7030DE] bg-white flex items-center justify-center shadow-md">
             <img
-              src="/profile.png"
+              src={Profile}
               alt="User"
               className="w-16 h-16 rounded-full object-cover"
             />
