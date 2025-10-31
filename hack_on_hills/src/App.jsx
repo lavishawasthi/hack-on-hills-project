@@ -5,7 +5,7 @@ import LandingPage from './pages/LandingPage.jsx'
 import './App.css'
 import LoginPage from './pages/Login.jsx'
 import Layout from './Components/Layout'
-import MyProjects from './pages/Dashboard.jsx'
+import MyProjects from './pages/MyProjects.jsx'
 import Sidebar from './components/ui/SideBar'
 import Navbar from './components/ui/Navbar'
 import FYPPage from './pages/FYPage.jsx'
@@ -21,9 +21,9 @@ function App() {
       {/* <FYPPage/> */}
       {/* <Sidebar/> */}
       {/* <Navbar/> */}
-      {/* <Layout/> */}
+      <Layout/>
       {/* <ProfilePage /> */}
-      <ProjectDetailsPage />
+      {/* <ProjectDetailsPage /> */}
 
     </div>
   )

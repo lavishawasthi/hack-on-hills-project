@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const MyProjects = () => {
+const DashboardC = () => {
   return (
     
     <div>
@@ -192,4 +192,4 @@ const MyProjects = () => {
   );
 };
 
-export default MyProjects;
+export default DashboardC;
