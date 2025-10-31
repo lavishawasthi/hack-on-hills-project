@@ -1,25 +1,28 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import LandingPage from './Components/LandingPage'
+import LandingPage from './pages/LandingPage.jsx'
 import './App.css'
 import LoginPage from './pages/Login.jsx'
-import Sidebar from './Components/UI/SideBar'
-import Navbar from './Components/UI/Navbar'
-import Layout from './Components/UI/Layout'
+import Sidebar from './components/ui/SideBar'
+import Navbar from './components/ui/Navbar'
+import Layout from './components/ui/Layout'
+import FYPPage from './pages/FYPage.jsx'
+import ProfilePage from './pages/ProfileF.jsx'
+import ProjectDetailsPage from './pages/Projectid.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <div>
-    {/* <div className="min-h-screen w-full flex items-center justify-center bg-[#c9defa]">
-      <LoginPage />
-    </div> */}
-      <LandingPage/>
+      {/* <LoginPage /> */}
+      {/* <LandingPage/> */}
+      {/* <FYPPage/> */}
       {/* <Sidebar/> */}
       {/* <Navbar/> */}
       {/* <Layout/> */}
+      {/* <ProfilePage /> */}
+      <ProjectDetailsPage />
     </div>
   )
 }
