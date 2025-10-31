@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Clock, Tag, User } from "lucide-react";
+import Sidebar from "@/components/ui/SideBar";
 
 export default function ProjectDetailsPage() {
   return (
