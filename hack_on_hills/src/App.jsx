@@ -6,20 +6,21 @@ import './App.css'
 import LoginPage from './pages/Login.jsx'
 import Sidebar from './Components/UI/SideBar'
 import Navbar from './Components/UI/Navbar'
-import Layout from './Components/UI/Layout'
+import Layout from './Components/Layout'
+import MyProjects from './pages/Dashboard.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
     {/* <div className="min-h-screen w-full flex items-center justify-center bg-[#c9defa]">
       <LoginPage />
     </div> */}
-      <LandingPage/>
+      {/* <LandingPage/> */}
       {/* <Sidebar/> */}
       {/* <Navbar/> */}
-      {/* <Layout/> */}
+      <Layout/>
+      {/* <MyProjects/> */}
     </div>
   )
 }

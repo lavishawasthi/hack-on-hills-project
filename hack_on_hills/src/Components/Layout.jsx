@@ -1,7 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Sidebar from "../UI/SideBar";
-import Navbar from "../UI/Navbar";
+import Sidebar from "./UI/SideBar";
+import Navbar from "./UI/Navbar";
+import MyProjects from "../pages/Dashboard";
 
 const Layout = () => {
   return (
@@ -16,7 +17,8 @@ const Layout = () => {
 
         {/* Page Content */}
         <main className="pt-20 px-8 min-h-screen bg-gray-50">
-          <Outlet />
+          {/* <Outlet /> */}
+          <MyProjects/>
         </main>
       </div>
     </div>
