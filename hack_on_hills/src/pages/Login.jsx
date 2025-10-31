@@ -3,7 +3,7 @@ import { Mail, Lock } from "lucide-react";
 
 export default function LoginPage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#c9defa]">
+    <div className="flex w-full items-center justify-center min-h-screen bg-[#c9defa]">
       <div className="bg-gradient-to-b from-[#7bb4f2] to-[#97bdf5] p-10 rounded-3xl shadow-lg w-[350px] border border-[#3b78e7]">
         <h2 className="text-center text-white text-2xl font-semibold mb-8">
           Login

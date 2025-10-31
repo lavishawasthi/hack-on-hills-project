@@ -1,26 +1,33 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import LandingPage from './Components/LandingPage'
+import LandingPage from './pages/LandingPage.jsx'
 import './App.css'
 import LoginPage from './pages/Login.jsx'
 import Sidebar from './Components/UI/SideBar'
 import Navbar from './Components/UI/Navbar'
 import Layout from './Components/Layout'
 import MyProjects from './pages/Dashboard.jsx'
+import Sidebar from './components/ui/SideBar'
+import Navbar from './components/ui/Navbar'
+import Layout from './components/ui/Layout'
+import FYPPage from './pages/FYPage.jsx'
+import ProfilePage from './pages/ProfileF.jsx'
+import ProjectDetailsPage from './pages/Projectid.jsx'
 
 function App() {
-
+  
   return (
     <div>
-    {/* <div className="min-h-screen w-full flex items-center justify-center bg-[#c9defa]">
-      <LoginPage />
-    </div> */}
+      {/* <LoginPage /> */}
       {/* <LandingPage/> */}
+      {/* <FYPPage/> */}
       {/* <Sidebar/> */}
       {/* <Navbar/> */}
-      <Layout/>
-      {/* <MyProjects/> */}
+      {/* <Layout/> */}
+      {/* <ProfilePage /> */}
+      <ProjectDetailsPage />
+
     </div>
   )
 }
