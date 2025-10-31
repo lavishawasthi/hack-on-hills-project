@@ -3,8 +3,6 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "./UI/SideBar";
 import Navbar from "./UI/Navbar";
 import MyProjects from "../pages/Dashboard";
-import Sidebar from "./SideBar";
-import Navbar from "./Navbar";
 
 const Layout = () => {
   return (
