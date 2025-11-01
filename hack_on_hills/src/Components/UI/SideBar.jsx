@@ -7,11 +7,11 @@ const Sidebar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Dashboard", path: "/dashboard", icon: <Home size={18} /> },
-    { name: "My Projects", path: "/projects", icon: <Folder size={18} /> },
-    { name: "Post Project", path: "/post-project", icon: <Folder size={18} /> },
-    { name: "Payments", path: "/payments", icon: <CreditCard size={18} /> },
-    { name: "Settings", path: "/settings", icon: <Settings size={18} /> },
+    { name: "Dashboard", path: "/app", icon: <Home size={18} /> },
+    { name: "My Projects", path: "/app/projects", icon: <Folder size={18} /> },
+    { name: "Post Project", path: "/app/post-project", icon: <Folder size={18} /> },
+    { name: "Payments", path: "/app/payments", icon: <CreditCard size={18} /> },
+    { name: "Settings", path: "/app/settings", icon: <Settings size={18} /> },
   ];
 
   return (

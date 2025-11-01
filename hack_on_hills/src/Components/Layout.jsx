@@ -19,10 +19,7 @@ const Layout = () => {
 
         {/* Page Content */}
         <main className="pt-20 px-8 min-h-screen bg-gray-50">
-          {/* <Outlet /> */}
-          {/* <MyProjects/> */}
-          {/* <PostProjectC/> */}
-          <PaymentC/>
+          <Outlet />
         </main>
       </div>
     </div>

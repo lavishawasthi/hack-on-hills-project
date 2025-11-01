@@ -1,32 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import LandingPage from './pages/LandingPage.jsx'
-import './App.css'
-import LoginPage from './pages/Login.jsx'
-import Layout from './Components/Layout'
-import MyProjects from './pages/MyProjects.jsx'
-import Sidebar from './components/ui/SideBar'
-import Navbar from './components/ui/Navbar'
-import FYPPage from './pages/FYPage.jsx'
-import ProfilePage from './pages/ProfileF.jsx'
-import ProjectDetailsPage from './pages/Projectid.jsx'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Components/Layout";
+
+// Main pages (public)
+import LandingPage from "./pages/LandingPage";
+
+// Dashboard pages (private area)
+import Dashboard from "./pages/DashboardC";
+import PostProject from "./pages/PostProjectC";
+import MyProjects from "./pages/MyProjects";
+import Payments from "./pages/PaymentC";
+// import Chat from "./Pages/Chat";
+// import Settings from "./Pages/Settings";
 
 function App() {
-  
   return (
-    <div>
-      {/* <LoginPage /> */}
-      {/* <LandingPage/> */}
-      {/* <FYPPage/> */}
-      {/* <Sidebar/> */}
-      {/* <Navbar/> */}
-      <Layout/>
-      {/* <ProfilePage /> */}
-      {/* <ProjectDetailsPage /> */}
+      <Routes>
+        {/* PUBLIC ROUTES */}
+        <Route path="/" element={<LandingPage />} />
 
-    </div>
-  )
+        {/* APP (Protected) ROUTES */}
+        <Route path="/app" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="post-project" element={<PostProject />} />
+          <Route path="projects" element={<MyProjects />} />
+          <Route path="payments" element={<Payments />} />
+          {/* <Route path="chat" element={<Chat />} /> */}
+          {/* <Route path="settings" element={<Settings />} /> */}
+        </Route>
+
+        {/* 404 FALLBACK */}
+        <Route path="*" element={<h1 className='text-center mt-20 text-2xl font-semibold'>404 | Page Not Found</h1>} />
+      </Routes>
+  );
 }
 
-export default App
+export default App;
