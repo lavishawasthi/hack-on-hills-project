@@ -1,5 +1,6 @@
 import React from 'react';
 import Freelancing from "../assets/landing.jpg"
+
 const LandingPage = () => {
   return (
     <div className="font-montserrat text-gray-800">
